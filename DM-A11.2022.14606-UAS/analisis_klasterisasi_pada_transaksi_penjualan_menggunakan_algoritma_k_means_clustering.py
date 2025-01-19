@@ -549,16 +549,17 @@ print(classification_report(df['cluster'], km.labels_))
 
 df.sort_values(by=['cluster'])
 
-import pandas as pd
+# Mengurutkan DataFrame berdasarkan kolom 'cluster'
+df_sorted = df.sort_values(by=['cluster'])
+
+# Menampilkan data yang sudah diurutkan
+df_sorted.head()
 
 # Menetapkan opsi untuk menampilkan semua baris dalam DataFrame
 pd.set_option('display.max_rows', df.shape[0] + 1)
 
 # Mengurutkan DataFrame berdasarkan kolom 'cluster'
 df_sorted = df.sort_values(by=['cluster'])
-
-# Menampilkan DataFrame yang sudah diurutkan
-df_sorted
 
 df.head()
 

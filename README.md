@@ -20,7 +20,7 @@ Universitas Dian Nuswantoro
 ---
 
 ## **Ringkasan**
-Penelitian ini bertujuan untuk mengaplikasikan teknik Data Mining, khususnya algoritma **K-Means Clustering**, dalam menganalisis pola transaksi penjualan di minimarket. Dataset publik dari Kaggle digunakan dengan atribut utama seperti kode barang, nama barang, jumlah transaksi, total penjualan, dan rata-rata penjualan. Penelitian ini bertujuan mengidentifikasi segmen pelanggan, mengoptimalkan strategi pemasaran, dan membantu pengelolaan stok barang yang lebih efisien. Hasil analisis divisualisasikan untuk mendukung pengambilan keputusan berbasis data.
+Penelitian ini bertujuan untuk mengaplikasikan teknik Data Mining, khususnya algoritma K-Means Clustering, dalam menganalisis pola transaksi penjualan di minimarket. Dataset publik dari Kaggle digunakan dengan atribut utama seperti kode barang, nama barang, jumlah transaksi, total penjualan, dan rata-rata penjualan. Tujuan utama dari penelitian ini adalah untuk mengidentifikasi segmen pelanggan, mengoptimalkan strategi pemasaran, serta membantu pengelolaan stok barang yang lebih efisien. Hasil analisis divisualisasikan untuk mendukung pengambilan keputusan berbasis data.
 
 ---
 
@@ -28,18 +28,27 @@ Penelitian ini bertujuan untuk mengaplikasikan teknik Data Mining, khususnya alg
 Data transaksi sering kali tidak terorganisir, sehingga sulit untuk dianalisis. Hal ini menghambat pengelolaan stok dan strategi pemasaran yang optimal. Penelitian ini mencoba memberikan solusi melalui klasterisasi pelanggan berdasarkan pola pembelian. Beberapa permasalahan yang diidentifikasi antara lain:
 1. Sulitnya mengidentifikasi barang yang kurang laku atau barang dengan permintaan tinggi.
 2. Tidak adanya segmentasi pelanggan berdasarkan pola belanja.
-3. Strategi pemasaran yang belum terarah akibat kurangnya analisis data.
+3. Strategi pemasaran yang kurang terarah akibat tidak adanya analisis data yang mendalam.
 
 ---
 
 ## **Tujuan**
 Penelitian ini memiliki beberapa tujuan utama:
 1. Mengimplementasikan algoritma **K-Means Clustering** untuk klasterisasi data transaksi.
-2. Mengidentifikasi pola pembelian berdasarkan hasil klasterisasi.
-3. Menyajikan visualisasi hasil klasterisasi yang informatif.
-4. Memberikan rekomendasi strategi pemasaran berdasarkan hasil analisis.
+2. Mengidentifikasi pola pembelian pelanggan berdasarkan klaster yang terbentuk berdasarkan hasil klasterisasi.
+3. Menyajikan visualisasi hasil klasterisasi yang mudah dipahami dan berguna untuk pengambilan keputusan.
+4. Memberikan rekomendasi strategi pemasaran berdasarkan hasil analisis klasterisasi.
 
 ---
+
+## **Model / Alur Penyelesaian**
+1. **Pengumpulan Data**: Data transaksi diambil dari Kaggle.
+2. **Pembersihan Data**: Menghapus duplikasi dan nilai kosong.
+3. **Pra-Proses Data**: Melakukan normalisasi dan seleksi fitur untuk meningkatkan kualitas data.
+4. **Penerapan K-Means Clustering**: Klasterisasi data dengan K-Means.
+5. **Evaluasi Model**: Menggunakan metode Elbow untuk menentukan jumlah klaster optimal.
+6. **Visualisasi Hasil**: Menampilkan hasil klasterisasi menggunakan scatter plot dan diagram lainnya.
+7. **Rekomendasi Strategi Pemasaran**: Mengusulkan strategi pemasaran berbasis hasil klasterisasi.
 
 ## **Tahapan Penelitian**
 1. **Pengumpulan Data**
@@ -65,6 +74,7 @@ Penelitian ini memiliki beberapa tujuan utama:
 ---
 
 ## **Penjelasan Dataset**
+Dataset yang digunakan dalam penelitian ini adalah dataset barang_keluar yang diambil dari Kaggle. Dataset terdiri dari informasi mengenai transaksi barang yang dijual di minimarket, dengan atribut-atribut utama sebagai berikut:
 - Dataset: **barang_keluar** dari Kaggle.
 - Total data: 7.400 baris.
 - Struktur data:
@@ -114,6 +124,15 @@ Penelitian ini memiliki beberapa tujuan utama:
 3. **Hasil dan Visualisasi**
    - Scatter plot klaster untuk menampilkan distribusi data.
    - Analisis karakteristik klaster berdasarkan rata-rata jumlah transaksi dan total penjualan pada tiap klaster.
+
+---
+
+## ** Performa Model**
+Hasil dari algoritma K-Means Clustering menunjukkan bahwa dataset terbagi menjadi 3 klaster utama berdasarkan pola pembelian, yaitu:
+- Klaster 1: Pelanggan dengan transaksi rendah.
+- Klaster 2: Pelanggan dengan transaksi menengah.
+- Klaster 3: Pelanggan dengan transaksi tinggi.
+Model ini menunjukkan hasil yang baik dengan error yang minim, dan evaluasi menggunakan Elbow Method menghasilkan jumlah klaster optimal sebanyak 3.
 
 ---
 

@@ -1,0 +1,132 @@
+DOKUMENTASI PROJECT DATA MINING
+
+ Analisis Klasterisasi pada Transaksi Penjualan
+Mengidentifikasi Pola Pembelian Menggunakan Algoritma K-Means Clustering
+
+ Disusun untuk Memenuhi Tugas Mata Kuliah Data Mining
+
+Dosen Pengampu:  
+Abu Salam, M.Kom
+
+Disusun Oleh:  
+Naufal Arsyaputra Pradana  
+A11.2022.14606
+
+Program Studi Teknik Informatika  
+Fakultas Ilmu Komputer  
+Universitas Dian Nuswantoro  
+2024/2025
+
+---
+
+ Ringkasan
+Penelitian ini bertujuan untuk mengaplikasikan teknik Data Mining, khususnya algoritma K-Means Clustering, dalam menganalisis pola transaksi penjualan di minimarket. Dataset publik dari Kaggle digunakan dengan atribut utama seperti kode barang, nama barang, jumlah transaksi, total penjualan, dan rata-rata penjualan. Penelitian ini bertujuan mengidentifikasi segmen pelanggan, mengoptimalkan strategi pemasaran, dan membantu pengelolaan stok barang yang lebih efisien. Hasil analisis divisualisasikan untuk mendukung pengambilan keputusan berbasis data.
+
+---
+
+ Permasalahan
+Data transaksi sering kali tidak terorganisir, sehingga sulit untuk dianalisis. Hal ini menghambat pengelolaan stok dan strategi pemasaran yang optimal. Penelitian ini mencoba memberikan solusi melalui klasterisasi pelanggan berdasarkan pola pembelian.
+
+---
+
+ Tujuan
+1. Mengimplementasikan algoritma K-Means Clustering untuk klasterisasi data transaksi.
+2. Mengidentifikasi pola pembelian berdasarkan hasil klasterisasi.
+3. Menyajikan visualisasi hasil klasterisasi yang informatif.
+4. Memberikan rekomendasi strategi pemasaran berdasarkan hasil analisis.
+
+---
+
+ Tahapan Penelitian
+1. Pengumpulan Data
+   - Dataset diambil dari Kaggle.
+   - Atribut penting: jumlah transaksi, total penjualan, rata-rata penjualan.
+
+2. Pra-Proses Data
+   - Membersihkan data (menghapus duplikasi dan mengisi nilai kosong).
+   - Menormalkan data menggunakan teknik seperti MinMax Scaling.
+   - Seleksi atribut yang relevan.
+
+3. Penerapan K-Means Clustering
+   - Melakukan klasterisasi berdasarkan jumlah transaksi dan total penjualan.
+   - Mengevaluasi hasil klasterisasi menggunakan metode Elbow untuk menentukan jumlah klaster optimal.
+
+4. Visualisasi Hasil
+   - Scatter plot untuk distribusi klaster.
+   - Diagram batang/pie chart untuk analisis segmen pelanggan.
+
+5. Rekomendasi Strategi
+   - Mengusulkan strategi pemasaran berdasarkan hasil klasterisasi, seperti promosi spesifik per segmen pelanggan.
+
+---
+
+ Penjelasan Dataset
+- Dataset: barang_keluar dari Kaggle.
+- Total data: 7.400 baris.
+- Struktur data:
+  - kode_barang: Kode unik untuk setiap barang.
+  - nama_barang: Nama barang yang dijual.
+  - jumlah_transaksi: Frekuensi penjualan per barang.
+  - total_penjualan: Total unit yang terjual.
+  - rata_rata: Rata-rata unit per transaksi.
+
+---
+
+ Exploratory Data Analysis (EDA)
+1. Memeriksa Tipe Data dan Statistik Deskriptif
+   - Rata-rata, median, standar deviasi, dan kuartil untuk data numerik.
+2. Visualisasi Data
+   - Histogram: Distribusi data.
+   - Box plot: Deteksi outlier.
+   - Scatter plot: Hubungan antar fitur.
+3. Korelasi Antar Fitur
+   - Menggunakan koefisien Pearson untuk mengidentifikasi hubungan antar atribut numerik.
+4. Pencarian Missing Data
+   - Memastikan dataset bebas dari nilai kosong atau outlier yang signifikan.
+
+---
+
+ Proses Features Dataset
+1. Pembersihan Data
+   - Menghapus duplikasi dan nilai kosong.
+2. Transformasi Data
+   - Normalisasi fitur menggunakan MinMax Scaling.
+   - Encoding kategori (jika ada).
+3. Seleksi Fitur
+   - Menggunakan korelasi untuk memilih atribut paling relevan.
+4. Pembagian Dataset
+   - Data latih (80%) dan data uji (20%).
+
+---
+
+ Proses Modelling dengan K-Means Clustering
+1. Langkah-langkah
+   - Inisialisasi centroid.
+   - Iterasi untuk meminimalkan jarak data terhadap centroid.
+2. Evaluasi Model
+   - Metode Elbow untuk menentukan jumlah klaster optimal.
+   - Mengevaluasi hasil distribusi klaster dengan visualisasi.
+
+3. Hasil dan Visualisasi
+   - Scatter plot klaster.
+   - Analisis karakteristik klaster: rata-rata jumlah transaksi dan total penjualan.
+
+---
+
+ Hasil dan Kesimpulan
+1. Dataset terbagi menjadi 3 klaster utama:
+   - Klaster 1: Pelanggan dengan transaksi rendah.
+   - Klaster 2: Pelanggan dengan transaksi menengah.
+   - Klaster 3: Pelanggan dengan transaksi tinggi.
+2. Rekomendasi:
+   - Klaster 1: Promosi diskon.
+   - Klaster 2: Penawaran loyalitas.
+   - Klaster 3: Produk eksklusif.
+
+---
+
+ Kesimpulan Akhir
+Penerapan algoritma K-Means Clustering pada dataset transaksi penjualan memberikan wawasan mendalam mengenai pola pembelian pelanggan. Hasil klasterisasi membantu memformulasikan strategi pemasaran yang lebih efektif untuk tiap segmen pelanggan.
+
+---
+

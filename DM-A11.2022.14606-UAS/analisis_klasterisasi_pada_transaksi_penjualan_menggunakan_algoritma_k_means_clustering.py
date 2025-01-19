@@ -33,7 +33,7 @@ import numpy as np  # Untuk manipulasi array dan operasi numerik
 """
 
 # Membaca dataset dari file CSV
-df = pd.read_csv('barang_keluar.csv', delimiter=';', skiprows=0, low_memory=False)
+df = pd.read_csv('DM-A11.2022.14606-UAS/barang_keluar.csv', delimiter=';', skiprows=0, low_memory=False)
 
 # Menampilkan beberapa baris pertama dari dataset untuk memeriksa apakah data berhasil dimuat
 df.head()
